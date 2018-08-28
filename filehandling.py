@@ -59,9 +59,26 @@ f.close()
 f=open('test.txt')
 data=f.read()
 t=data.split()
-print(t)
+
 for i in t:
     b.append(int(i))
 b.sort()
-print(b)
+f.close()
+f=open('test.txt','w')
+for i in b:
+    u=str(i)
+    f.write(u)
+f.close()
+f=open('test.txt')
+rt=f.read()
+
+
+g=open('test1.txt','w')
+g.write(rt)
+g.close()
+g=open('test1.txt')
+ty=g.read()
+print(ty)
+g.close()
+f.close()
 
